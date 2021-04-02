@@ -66,7 +66,7 @@ app.put("/resolveTask", async (req, res) => {
   var momentNow =moment().format("DD-MM-YYYY HH:mm:ss");
   try {
     const result = await task.findOne({ _id: o_id });
-    result.StartedAt = momentNow;
+    result.DoneAt = momentNow;
     result.InProgress = false;
     result.Done = true;
     result.save();
