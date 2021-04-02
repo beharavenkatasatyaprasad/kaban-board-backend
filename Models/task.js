@@ -20,6 +20,11 @@ const TaskSchema = new mongoose.Schema(
   {
     tasklabel: { type: String, required: true },
     pricing: { type: Number, required: true },
+    Started: Boolean,
+    InProgress: Boolean,
+    Done: Boolean,
+    StartedAt: { type: Date, required: false },
+    DoneAt: { type: Date, required: false },
   },
   { collection: "tasks" }
 );
