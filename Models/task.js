@@ -23,8 +23,8 @@ const TaskSchema = new mongoose.Schema(
     Started: Boolean,
     InProgress: Boolean,
     Done: Boolean,
-    StartedAt: { type: Date, required: false },
-    DoneAt: { type: Date, required: false },
+    StartedAt: { type: String, required: false },
+    DoneAt: { type: String, required: false },
   },
   { collection: "tasks" }
 );
